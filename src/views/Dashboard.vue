@@ -1,7 +1,7 @@
 <template>
   <div>
       <Cmd />
-    <h1>Dashboard</h1>
+    <h1>Dashboardxxx</h1>
   </div>
 </template>
 

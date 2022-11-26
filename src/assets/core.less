@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Oswald:wght@400;600&display=swap');
+
+@black: #000;
+@white: #fff;
+@gray: #999;
+@gray1: #111;
+@gray2: #222;
+@gray3: #333;
+@gray4: #444;
+@gray5: #555;
+@gray7: #777;
+@gray8: #f1f1f1;
+@gray9: #cfcfcf;
+@gray10: #ccc;
+@gray11: #bbb;
+@red: #ff0000;
+@green: #c6ff00;
+@green2: #c6ff00;
+@font1: 'Oswald';
+@font2: 'Lato';
+
+html, body {
+  height:100%;
+  width: 100%; font-family:@font1;
+  min-width:1000px;;
+  background:@black;
+  color:@gray10;
+  font-size:14px;
+  padding: 0;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  height:3px;
+  width:3px;
+  background:@black;
+}
+::-webkit-scrollbar-thumb {
+  background:@gray4;
+  -webkit-border-radius:1ex;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+::-webkit-scrollbar-corner{background:@gray11}
+*,*:before,*:after{box-sizing: inherit}
+
+.hide{display:none}
+i,u{font-style:normal; text-decoration:none}
+a,a:hover{text-decoration:none}
+
+.cmd.show{display:block}
+.cmd{display:none; padding:10px; color:@white; font-size:.9em; background:@gray1; border:1px solid @gray3; border-radius:3px; margin-bottom:3px; text-align:center}
+.cmd b,.cmd i,.cmd u{font-style:normal; font-weight:normal; text-decoration:none}
+.cmd b{color:@gray7; margin-right:10px}
+.cmd i{color:@white; margin:0 12px 0 3px}
+.cmd a{cursor:pointer}
+.cmd u{color:#7FFFD4; margin-left:4px}
+
+.header{display:block; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
+.header span{float:left}
+.header span a{float:left; font-weight:bold; margin-right:3px; color:#fff; font-weight:normal; color:@gray; margin:6px 0 0 15px}
+.header span a:hover{color:@white}
+.header span a.logo{color:@green; text-transform:uppercase; font-weight:bold; margin:0}
+.header span a.logo:hover{color:@green2}
+
+.head{display:block; height:90px; font-size:.9em; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
+.head b{color:@gray4; font-weight:normal; font-size:.85em; position:absolute; top:-17px; left:0; display:none}
+.head i u{position:absolute; top:13px; right:12px; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:6px solid @gray3}
+.head i:hover u{border-top:6px solid @white}
+.head i.on,.head i.on:hover,.timeframe a.on{background:@white; border-color:@white; color:@black}
+.head i.on:hover u{border-top:6px solid @gray3}
+
+.drop{display:none}
+.drop.show{display:block; overflow:hidden; position:absolute; top:32px; right:-1px; z-index:10; background:@white; border:1px solid @black; border-top:none; border-radius: 3px; color:@gray7; -webkit-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5); -moz-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5); box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5)}
+.drop a{display:block; width:100%; height:30px; line-height:30px; border:none; border-top:1px solid @gray9; background:none; padding:0 10px; cursor:pointer}
+.drop a:hover{color:@black; background:@gray8}
+.drop a.on{color:@red; font-weight:bold}
+.drop a.on:hover{background:@gray8}
+.drop label{float:left; width:100%; height:30px; line-height:30px; border-top:1px solid @gray9; padding:0 10px; cursor:pointer}
+.drop label input{float:left; margin:0 5px 0 0}
+.drop label:hover{color:@black; background:@gray9}
+.drop label.on{color:@red; font-weight:bold}
+.drop label.on:hover{color:@red; background:@gray8}
+.drop::-webkit-scrollbar{width:3px; position:relative; left:-2px}
+.drop::-webkit-scrollbar-track{background:@gray10}
+.drop::-webkit-scrollbar-thumb{background:@gray7}
+
+/*Box Elements*/
+.filter{position:relative; float:left; width:100%; margin:3px 0 0 0; padding-top:18px; border-top:1px solid @gray1}
+
+.setting,.timezone,.tiker,.timeframe,.sizer,.style,.indicator{position:relative}
+.setting,.timeframe,.sizer,.style,.indicator,.setting i,.timezone i,.style i,.indicator i{float:right}
+.setting i{width:80px}
+.timezone i{width:215px}
+.style i{width:115px}
+.indicator i{width:115px}
+
+.setting .drop{right:0px; width:205px; z-index:12}
+
+.timezone{float:right; margin-right:3px}
+.timezone b{top:9px; left:-155px}
+.timezone .drop{height:533px; overflow-y:auto; left:-1px; z-index:11}
+
+.tiker{display:block; margin:0 642px 0 0}
+.tiker input{width:calc(100% - 151px); font-size:1.15em; text-transform:uppercase; padding:0 10px}
+.tiker a{float:right; width:22px; text-align:center; margin-left:3px}
+
+.sizer{}
+.sizer input{width:35px; padding:0 0 0 12px; margin-left:3px}
+
+.style{margin-left:3px}
+.style .drop{left:-1px}
+
+.indicator{}
+.indicator .drop{width:750px}
+.indicator .drop label{width:calc(33% - 20px)}
+.indicator .drop div{display:block; margin:10px}
+
+.timeframe{}
+.timeframe a{float:left; margin-right:3px}
+
+@media (min-width:1680px){
+    .tikers{margin:0 840px 0 0}
+    .indicator .drop{width:900px}
+    .indicator .drop label{width:calc(25% - 20px)}
+}

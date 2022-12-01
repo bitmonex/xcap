@@ -1,17 +1,5 @@
 <template>
-    <div class="head hide">
-
-        <div class="cmd" :class="{show: cmdOpen}">
-            <b>Tiker:<i></i></b>
-            <b>Timeframe:<i id=timeframe></i></b>
-            <b>Timezone:<i id=timezone></i></b>
-            <b>Indicator:<i id="indicator"></i></b>
-            <b>Style:<i id="style"></i></b>
-            <b>W: <i>2</i></b>
-            <b>H: <i>2</i></b>
-            <br>
-            <b>Settings:<i id="setting"></i> <i>54<u>er</u></i></b>
-        </div>
+    <div class="head">
         <div class="setting">
             <i @click="settingOpen = !settingOpen" :class="{on: settingOpen}">Settings<u></u></i>
             <div class="drop" :class="{show: settingOpen}">

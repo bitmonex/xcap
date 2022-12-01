@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Cmd />
     <h1>Screens</h1>
     <Filters />
 
@@ -8,10 +7,9 @@
 </template>
 
 <script>
-    import Cmd from '@/components/Cmd'
     import Filters from '@/components/Filters'
     export default {
         name: 'Screener',
-        components: {Cmd,Filters}
+        components: {Filters}
     }
 </script>

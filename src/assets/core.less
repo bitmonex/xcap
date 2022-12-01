@@ -54,16 +54,8 @@ i,u{font-style:normal; text-decoration:none}
 a{color:@gray10; text-decoration:none}
 a:hover{color:@white;}
 
-.cmd.show{display:block}
-.cmd{display:none; padding:10px; color:@white; font-size:.9em; background:@gray1; border:1px solid @gray3; border-radius:3px; margin-bottom:3px; text-align:center}
-.cmd b,.cmd i,.cmd u{font-style:normal; font-weight:normal; text-decoration:none}
-.cmd b{color:@gray7; margin-right:10px}
-.cmd i{color:@white; margin:0 12px 0 3px}
-.cmd a{cursor:pointer}
-.cmd u{color:#7FFFD4; margin-left:4px}
-
 .headline{position:fixed; top:0; left:0; right:0; height:auto; overflow:hidden; border-bottom:1px solid @gray1; background:@gray0; padding:3px}
-.headline a{float:left; background:@gray1; border:1px solid @gray3; border-radius:2px; padding:0 8px 3px 8px}
+.headline a{float:left; font-size:1em; background:@gray1; border:1px solid @gray3; border-radius:2px; padding:0 8px 3px 8px}
 .headline a.logo{color:@green; text-transform:uppercase}
 .headline a.logo:hover{color:@green2}
 .headline a:hover{background:@gray2; border:1px solid @gray5}
@@ -71,6 +63,17 @@ a:hover{color:@white;}
 .headline nav a{margin-right:3px}
 .headline span{float:right}
 .headline span a{margin-left:3px}
+
+.cmd.show{display:block}
+.cmd{display:block; background:@black; border:1px solid @gray2; border-radius:3px; padding:8px; margin-bottom:3px; text-align:center}
+.cmd b,.cmd i,.cmd u{font-style:normal; font-weight:normal; text-decoration:none}
+.cmd b{color:@gray7; margin-right:10px}
+.cmd i{color:@white; margin:0 12px 0 3px}
+.cmd a{cursor:pointer}
+.cmd u{color:#7FFFD4; margin-left:4px}
+
+
+
 
 .layout{display:block; overflow:hidden; background:#ff0000; padding:3px; margin-top:34px; padding:3px}
 
@@ -80,13 +83,6 @@ a:hover{color:@white;}
 
 
 
-
-.header{display:block; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
-.header span{float:left}
-.header span a{float:left; font-weight:bold; margin-right:3px; color:#fff; font-weight:normal; color:@gray; margin:6px 0 0 15px}
-.header span a:hover{color:@white}
-.header span a.logo{color:@green; text-transform:uppercase; font-weight:bold; margin:0}
-.header span a.logo:hover{color:@green2}
 
 .head{display:block; height:90px; font-size:.9em; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
 .head b{color:@gray4; font-weight:normal; font-size:.85em; position:absolute; top:-17px; left:0; display:none}

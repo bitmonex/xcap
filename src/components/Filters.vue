@@ -1,5 +1,5 @@
 <template>
-    <div class="head">
+    <div class="head hide">
 
         <div class="cmd" :class="{show: cmdOpen}">
             <b>Tiker:<i></i></b>

@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/xcap/'
+    publicPath: '/xcap/dist/'
 }

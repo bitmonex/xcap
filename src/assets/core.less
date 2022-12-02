@@ -54,7 +54,7 @@ i,u{font-style:normal; text-decoration:none}
 a{color:@gray10; text-decoration:none}
 a:hover{color:@white;}
 
-.headline{position:fixed; top:0; left:0; right:0; height:auto; overflow:hidden; border-bottom:1px solid @gray1; background:@gray0; padding:3px}
+.headline{position:fixed; z-index:10; top:0; left:0; right:0; height:auto; overflow:hidden; border-bottom:1px solid @gray1; background:@gray0; padding:3px}
 .headline a{float:left; font-size:1em; background:@gray1; border:1px solid @gray3; border-radius:2px; padding:0 8px 3px 8px}
 .headline a.logo{color:@green; text-transform:uppercase}
 .headline a.logo:hover{color:@green2}
@@ -72,9 +72,6 @@ a:hover{color:@white;}
 .cmd a{cursor:pointer}
 .cmd u{color:#7FFFD4; margin-left:4px}
 
-
-
-
 .layout{display:block; overflow:hidden; background:#ff0000; padding:3px; margin-top:34px; padding:3px}
 
 
@@ -84,12 +81,18 @@ a:hover{color:@white;}
 
 
 
-.head{display:block; height:90px; font-size:.9em; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
+.head{display:block; height:90px; background:#ff0; font-size:.9em; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
+
+.head a{border:1px solid @red;}
+
 .head b{color:@gray4; font-weight:normal; font-size:.85em; position:absolute; top:-17px; left:0; display:none}
 .head i u{position:absolute; top:13px; right:12px; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:6px solid @gray3}
 .head i:hover u{border-top:6px solid @white}
 .head i.on,.head i.on:hover,.timeframe a.on{background:@white; border-color:@white; color:@black}
 .head i.on:hover u{border-top:6px solid @gray3}
+
+
+
 
 .drop{display:none}
 .drop.show{display:block; overflow:hidden; position:absolute; top:32px; right:-1px; z-index:10; background:@white; border:1px solid @black; border-top:none; border-radius: 3px; color:@gray7; -webkit-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5); -moz-box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5); box-shadow: 0px 5px 8px 0px rgba(34, 60, 80, 0.5)}

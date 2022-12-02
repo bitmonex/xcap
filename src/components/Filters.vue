@@ -13,8 +13,7 @@
                 <a v-for="timezone of timezones" :key="timezone.data">{{timezone.title}}</a>
             </div>
         </div>
-        <span><a v-for="menu in menus" :key="menu.title" :href="menu.url" :class="{logo: menu.logo}">{{menu.title}}</a></span>
-        <div class="filter">
+      <div class="filter">
             <div class="sizer">
                 <b>Layout</b>
                 <input id="wsize" type="number" value="1" min="1" max="8" />
@@ -96,12 +95,6 @@ export default{
                 {title: '(UTC+13) New Zealand', data: 'Pacific/Auckland', status: false},
                 {title: '(UTC+13) Tokelau', data: 'Pacific/Fakaofo', status: false},
                 {title: '(UTC+13:45) Chatham Islands', data: 'Pacific/Chatham', status: false}
-            ],
-            menus:[
-                {title: 'xcap', url: '/', status: true, logo: true},
-                {title: 'Screener', url: '/screener', status: true},
-                {title: 'Market', url: '/market', status: true},
-                {title: 'Features', url: '/features', status: true}
             ],
             styles:[
                 {title: 'Bars', data: '0', status: false},

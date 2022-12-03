@@ -1,47 +1,45 @@
 <template>
     <div class="head">
-        <div class="setting">
+        <div class="setting hide">
             <i @click="settingOpen = !settingOpen" :class="{on: settingOpen}">Settings<u></u></i>
             <div class="drop" :class="{show: settingOpen}">
                 <label v-for="setting of settings" :key="setting.data">{{setting.title}}<input type="checkbox"></label>
                 <label @change="cmdOpen = !cmdOpen" :class="{on: cmdOpen}">Show Console<input type="checkbox"></label>
             </div>
         </div>
-        <div class="timezone">
+        <div class="timezone hide">
             <i @click="timezoneOpen = !timezoneOpen" :class="{on: timezoneOpen}">(UTC+13:45) Chatham Islands<u></u></i>
             <div class="drop" :class="{show: timezoneOpen}">
                 <a v-for="timezone of timezones" :key="timezone.data">{{timezone.title}}</a>
             </div>
         </div>
-      <div class="filter">
-            <div class="sizer">
-                <b>Layout</b>
-                <input id="wsize" type="number" value="1" min="1" max="8" />
-                <input id="hsize" type="number" value="1" min="1" max="8" />
+         <div class="sizer">
+            <b>Layout</b>
+            <input id="wsize" type="number" value="1" min="1" max="8" />
+            <input id="hsize" type="number" value="1" min="1" max="8" />
+        </div>
+        <div class="style">
+            <b>Style</b>
+            <i @click="styleOpen = !styleOpen" :class="{on: styleOpen}">Bars<u></u></i>
+            <div class="drop" :class="{show: styleOpen}">
+                <a v-for="style in styles" :key="style.data">{{style.title}}</a>
             </div>
-            <div class="style">
-                <b>Style</b>
-                <i @click="styleOpen = !styleOpen" :class="{on: styleOpen}">Bars<u></u></i>
-                <div class="drop" :class="{show: styleOpen}">
-                    <a v-for="style in styles" :key="style.data">{{style.title}}</a>
-                </div>
+        </div>
+        <div class="indicator">
+            <b>Indicators</b>
+            <i  @click="indicatorOpen = !indicatorOpen" :class="{on: indicatorOpen}">Indicators<u></u></i>
+            <div class="drop" :class="{show: indicatorOpen}">
+                <label v-for="indicator in indicators" :key="indicator.data">{{indicator.title}}<input type="checkbox"></label>
             </div>
-            <div class="indicator">
-                <b>Indicators</b>
-                <i  @click="indicatorOpen = !indicatorOpen" :class="{on: indicatorOpen}">Indicators<u></u></i>
-                <div class="drop" :class="{show: indicatorOpen}">
-                    <label v-for="indicator in indicators" :key="indicator.data">{{indicator.title}}<input type="checkbox"></label>
-                </div>
-            </div>
-            <div class="timeframe">
-                <b>Timeframes</b>
-                <a v-for="timeframe in timeframes" :key="timeframe.data">{{timeframe.title}}</a>
-            </div>
-            <div class="tiker">
-                <b>Tikers</b>
-                <input type="text" id="tiker" value="BTCUSDTPERP,ETHUSDTPERP,TRBUSDTPERP" autocomplete="off"/>
-                <a>Go</a>
-            </div>
+        </div>
+        <div class="timeframe">
+            <b>Timeframes</b>
+            <a v-for="timeframe in timeframes" :key="timeframe.data">{{timeframe.title}}</a>
+        </div>
+        <div class="tiker">
+            <b>Tikers</b>
+            <input type="text" id="tiker" value="BTCUSDTPERP,ETHUSDTPERP,TRBUSDTPERP" autocomplete="off"/>
+            <a>Go</a>
         </div>
     </div>
 </template>

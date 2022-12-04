@@ -55,11 +55,12 @@ i,u{font-style:normal; text-decoration:none}
 a{color:@gray10; text-decoration:none}
 a:hover{color:@white;}
 
+h1{display:block; overflow:hidden; margin:0 0 20px 0;}
 .headline{position:fixed; z-index:10; top:0; left:0; right:0; height:auto; overflow:hidden; border-bottom:1px solid @gray1; background:@gray0; padding:3px}
-.headline a{float:left; height:24px; line-height:23px; font-size:1em; background:@gray1; border:1px solid @gray3; border-radius:2px; padding:0 8px}
+.headline a{float:left; height:24px; line-height:23px; background:@gray1; border:1px solid @gray3; border-radius:2px; padding:0 8px}
+.headline a:hover{background:@gray2; border:1px solid @gray5}
 .headline a.logo{color:@green; text-transform:uppercase}
 .headline a.logo:hover{color:@green2}
-.headline a:hover{background:@gray2; border:1px solid @gray5}
 .headline nav{float:left;}
 .headline nav a{margin-right:3px}
 .headline span{float:right}
@@ -73,26 +74,21 @@ a:hover{color:@white;}
 .cmd a{cursor:pointer}
 .cmd u{color:#7FFFD4; margin-left:4px}
 
-.layout{display:block; xbackground:#ff0000; padding:3px; margin-top:34px; padding:3px}
+.layout{display:block; xbackground:#ff0000; padding:3px; margin-top:34px;}
 
-
-
-.head{display:block; height:90px; background:#ff0; font-size:.9em; border-bottom:1px solid @gray2; margin:3px 3px 0 3px}
-
-.head a{float:left; font-size:1em; background:@gray1; border:1px solid @gray3; border-radius:2px; cursor:pointer; padding:0 8px 3px 8px}
-.head a:hover{background:@gray2; border:1px solid @gray5}
-.head b{color:@gray4; font-weight:normal; font-size:.85em; position:absolute; top:-17px; left:0; display:none}
-.head i u{position:absolute; top:13px; right:12px; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:6px solid @gray3}
+.head{display:block}
+.head i,.head .timeframe a,.tiker a{background:@gray1; border:1px solid @gray3; border-radius:2px; cursor:pointer; padding:0 8px 3px 8px}
+.head i:hover,.head .timeframe a:hover,.tiker a:hover{background:@gray2; border:1px solid @gray5; color:@white}
+.head b{position:absolute; top:-20px; left:0; color:@gray4; font-weight:normal; font-size:.85em}
+.head i u{position:absolute; top:12px; right:12px; width:0; height:0; border-left:4px solid transparent; border-right:4px solid transparent; border-top:6px solid @gray3}
 .head i:hover u{border-top:6px solid @white}
 .head i.on,.head i.on:hover,.timeframe a.on{background:@white; border-color:@white; color:@black}
 .head i.on:hover u{border-top:6px solid @gray3}
+.head input{height:25px; background:@gray1; border:1px solid @gray3; border-radius:2px; font-family:@font1; color:@gray10; padding:0 8px; cursor:pointer}
+.head input:hover{background:@gray2; border:1px solid @gray5}
 
 /*Box Elements*/
-.setting,.timezone,.tiker,.timeframe,.sizer,.style,.indicator{position:relative;}
-
-
-
-
+.setting,.timezone,.tiker,.timeframe,.sizer,.style,.indicator{position:relative}
 .setting,.timeframe,.sizer,.style,.indicator,.setting i,.timezone i,.style i,.indicator i{float:right}
 .setting i{width:80px}
 .timezone i{width:215px}
@@ -105,13 +101,13 @@ a:hover{color:@white;}
 .timezone b{top:9px; left:-155px}
 .timezone .drop{height:533px; overflow-y:auto; left:-1px; z-index:11}
 
-.tiker{display:block; margin:0 642px 0 0;}
-.tiker input{width:calc(100% - 151px); font-size:1.15em; text-transform:uppercase; padding:0 10px;
-background:@gray1; border:1px solid @gray3; border-radius:2px; color:@white}
-.tiker a{float:right; width:22px; text-align:center; margin-left:3px}
+.tiker{display:block; margin:0 642px 0 0; xbackground:#ff0;}
+.tiker input{width:calc(100% - 61px); font-size:1.15em; outline:0; text-transform:uppercase;}
+.tiker a{float:right; width:22px; text-align:center;}
+
 
 .sizer{}
-.sizer input{width:35px; padding:0 0 0 12px; margin-left:3px}
+.sizer input{width:26px; padding:0 0 0 12px; margin-left:3px}
 
 .style{margin-left:3px}
 .style .drop{left:-1px}
